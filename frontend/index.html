@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">  
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <title>Home 🏠</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="topbar">
+        <div class="logo">
+            <img src="./assets/logo.png" alt="logo">
+        </div>
+        <div class="searchbar">
+            <div class="inputbox">
+                <input type="text" id="search" placeholder="search artist, song, albums">
+            </div>
+        </div>
+        <div >
+            <p class="premium">Get Premium</p>
+        </div>
+        <div class="darkmode">
+              <p><i class="fas fa-sun"></i></p>
+        </div>
+        <div class="user">
+            <!-- model triger -->
+            <p class="login_signup" id="model_triger">login/signup</p>
+            <!-- model -->
+            <div class="model" id="mymodel">
+                <div class="container">
+                    <!-- model content -->
+                    <input type="checkbox" id="flip">
+                    <div class="cover">
+                      <div class="front">
+                        <img src="./assets/formimage.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="forms">
+                      <div class="form-content">
+                        <div class="login-form">
+                          <div class="title">Login</div>
+                          <form action="localhost:3000\user\login" method="POST" enctype="multipart/form-data" id="login-form">
+                            <div class="input-boxes">
+                              <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Enter your username" name="username" required>
+                              </div>
+                              <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Enter your password" name="password" required>
+                              </div>
+                              <div class="button input-box">
+                                <input type="submit" value="Sumbit">
+                              </div>
+                              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="signup-form">
+                          <div class="title">Signup</div>
+                          <form action="localhost:3000\user\register" method="POST" type="plain/text" id="signup-form">
+                            <div class="input-boxes">
+                              <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Enter your name" name="username" required>
+                              </div>
+                              <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Enter your email" name="email" required>
+                              </div>
+                              <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Enter your password" name="password" required>
+                              </div>
+                              <div class="button input-box">
+                                <input type="submit" value="Sumbit">
+                              </div>
+                              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- navigation bar -->
+    <nav>
+        <ul>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Trending Songs</a></li>
+          <li><a href="#">New Songs</a></li>
+          <li><a href="#">Old Songs</a></li>
+          <li><a href="#">Moods & Genres <i class="fa fa-caret-down" aria-hidden="true"></i> </a></li>
+          <li><a href="#">Album</a></li>
+          <li><a href="#">Top Playlist <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+          <li><a href="#">Top Artist <i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+          <li><a href="#">Radio</a></li>
+          <li><a href="#">Podcast</a></li>
+          <li><a href="#">My Music</a></li>
+        </ul>
+      </nav>
+    <!-- hero section -->
+    <div class="hero">
+        <div class="slider">
+            <div class="img-container">
+                <img src="./assets/cursouel_home/image1.webp" class="singer_image" alt="">
+                <img src="./assets/cursouel_home/image2.webp" class="singer_image" alt="">
+                <img src="./assets/cursouel_home/image3.webp" class="singer_image" alt="">
+                <img src="./assets/cursouel_home/image4.webp" class="singer_image" alt="">
+                <img src="./assets/cursouel_home/image5.webp" class="singer_image" alt="">
+                <img src="./assets/cursouel_home/image6.webp" class="singer_image" alt="">
+                <img src="./assets/cursouel_home/image7.webp" class="singer_image" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- music player  -->
+    <div class="music-player">
+      <div class="song-bar">
+          <div class="song-infos">
+              <div class="song-description">
+                  <p class="song_name">
+                    sds
+                  </p>
+                  <p class="artist">Masaru Yokoyama</p>
+              </div>
+          </div>
+          <div class="icons">
+              <i class="far fa-heart"></i>
+          </div>
+      </div>
+      <div class="progress-controller">
+          <div class="control-buttons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="play-pause fas fa-play"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-undo-alt"></i>
+          </div>
+          <div class="progress-container">
+              <div class="progress-bar">
+                  <div class="progress"></div>
+              </div>
+          </div>
+      </div>
+      <div class="other-features">
+          <i class="fas fa-list-ul"></i>
+          <i class="fas fa-desktop"></i>
+          <div class="volume-bar">
+              <i class="fas fa-volume-down"></i>
+              <div class="progress-bar">
+                  <div class="progress-volume"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- top 2024 -->
+    <section class="top2024" data-genre="top2024">
+        <div class="col">
+            <h2>Top 2024 Songs</h2>
+        </div>
+        <div class="carousel ">
+            <ul class="card">
+                <!-- dynamic -->
+            </ul>
+        </div>
+        <button class="prev"><i class="fas fa-arrow-left "></i></button>
+        <button class="next"><i class="fas fa-arrow-right "></i></button>
+    </section>
+
+    <!-- English songs -->
+        <section class="English" data-genre="english">
+            <div class="col">
+                <h2>English Songs</h2>
+            </div>
+            <div class="carousel ">
+                <ul class="card">
+                    <!-- dynamic -->
+                </ul>
+            </div>
+            <button class="prev"><i class="fas fa-arrow-left "></i></button>
+            <button class="next"><i class="fas fa-arrow-right "></i></button>
+        </section>
+    
+    <!-- hindi sings -->
+
+    <section class="Hindi" data-genre="hindi">
+        <div class="col">
+            <h2>Hindi Songs</h2>
+        </div>
+        <div class="carousel ">
+            <ul class="card">
+                <!-- dynamic -->
+            </ul>
+        </div>
+        <button class="prev"><i class="fas fa-arrow-left "></i></button>
+        <button class="next"><i class="fas fa-arrow-right "></i></button>
+    </section>
+
+    <!-- lofi -->
+
+    <section class="lofi" data-genre="lofi">
+        <div class="col">
+            <h2>Lofi Songs</h2>
+        </div>
+        <div class="carousel ">
+            <ul class="card">
+                <!-- dynamic -->
+            </ul>
+        </div>
+        <button class="prev"><i class="fas fa-arrow-left "></i></button>
+        <button class="next"><i class="fas fa-arrow-right "></i></button>
+    </section>
+
+    <!-- punjabi -->
+
+    <section class="punjabi" data-genre="punjabi">
+        <div class="col">
+            <h2>punjabi Songs</h2>
+        </div>
+        <div class="carousel ">
+            <ul class="card">
+                <!-- dynamic -->
+            </ul>
+        </div>
+        <button class="prev"><i class="fas fa-arrow-left "></i></button>
+        <button class="next"><i class="fas fa-arrow-right "></i></button>
+    </section>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="./scripts/home.js"></script>
+    <script src="./scripts/login.js"></script>
+
+    <script type="module">
+        import Footer from './scripts/footer_part.js'
+
+        Footer().then(res => {
+            document.getElementById("footer").innerHTML = res;
+        })
+    </script>
+</body>
+</html>
